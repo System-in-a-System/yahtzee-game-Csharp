@@ -10,5 +10,39 @@
         <Grid.Background>
             <ImageBrush ImageSource="https://cdn7.dissolve.com/p/D2115_198_929/D2115_198_929_1200.jpg"/>
         </Grid.Background>
+        <Label Content="Yahtzee" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="39,34,0,0" FontFamily="Snap ITC" FontSize="72"/>
+        <StackPanel HorizontalAlignment="Left" Height="113" VerticalAlignment="Top" Width="508" Margin="57,145,0,0" RenderTransformOrigin="0.5,0.5" Orientation="Horizontal">
+            <StackPanel.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0.586"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0.512"/>
+                </TransformGroup>
+            </StackPanel.RenderTransform>
+            <Image Height="100" Source="/images/1.jpg"/>
+            <Image Height="100" Source="/images/2.jpg"/>
+            <Image Height="100" Source="/images/3.jpg"/>
+            <Image Height="100" Source="/images/4.jpg"/>
+            <Image Height="100" Source="/images/5.jpg"/>
+        </StackPanel>
+        
+        <CheckBox x:Name="cb1" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="101,257,0,0" Height="18" Width="31"/>
+        <CheckBox x:Name="cb2" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="202,257,0,0" Height="18" Width="31"/>
+        <CheckBox x:Name="cb3" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="303,257,0,0" Height="18" Width="31"/>
+        <CheckBox x:Name="cb4" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="403,257,0,0" Height="18" Width="31"/>
+        <CheckBox x:Name="cb5" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="506,257,0,0" Height="18" Width="31"/>
+        
+        <Button Content="Roll the dice..." HorizontalAlignment="Left" VerticalAlignment="Top" Width="194" Margin="61,291,0,0" Height="57" FontFamily="Snap ITC" FontSize="20" Background="#FFFFE3BC">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Button.Effect>
+        </Button>
+        
+        <Label x:Name="infoLabel" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="61,368,0,0" Width="194"/>
+
+
+
+
     </Grid>
 </Window>
