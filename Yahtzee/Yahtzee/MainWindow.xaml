@@ -26,20 +26,26 @@
             <Image x:Name="img4" Height="100" Source="/images/4.jpg"/>
             <Image x:Name="img5" Height="100" Source="/images/5.jpg"/>
         </StackPanel>
-        
+
         <CheckBox x:Name="cb1" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="101,257,0,0" Height="18" Width="31" IsEnabled="False"/>
         <CheckBox x:Name="cb2" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="202,257,0,0" Height="18" Width="31" IsEnabled="False"/>
         <CheckBox x:Name="cb3" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="303,257,0,0" Height="18" Width="31" IsEnabled="False"/>
         <CheckBox x:Name="cb4" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="403,257,0,0" Height="18" Width="31" IsEnabled="False"/>
         <CheckBox x:Name="cb5" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="506,257,0,0" Height="18" Width="31" IsEnabled="False"/>
-        
+
         <Button x:Name="rollButton" Content="Roll the dice..." HorizontalAlignment="Left" VerticalAlignment="Top" Width="194" Margin="61,291,0,0" Height="57" FontFamily="Snap ITC" FontSize="20" Background="#FFFFE3BC" Click="RollButton_Click">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="20"/>
             </Button.Effect>
         </Button>
-        
-        <Label x:Name="infoLabel" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="61,368,0,0" Width="194"/>
+
+        <Label x:Name="infoLabel" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="61,368,0,0" Width="398" Foreground="#FFFDFDFD" FontSize="24" FontFamily="Snap ITC" />
+
+        <Button x:Name="restartButton" Content="Restart" Visibility="Hidden" HorizontalAlignment="Left" VerticalAlignment="Top" Width="199" Margin="260,291,0,0" Height="57" Background="#FFFFE3BC" FontFamily="Snap ITC" FontSize="20" Click="RestartButton_Click">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Button.Effect>
+        </Button>
 
 
 
