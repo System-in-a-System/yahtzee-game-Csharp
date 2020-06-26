@@ -27,11 +27,11 @@
             <Image Height="100" Source="/images/5.jpg"/>
         </StackPanel>
         
-        <CheckBox x:Name="cb1" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="101,257,0,0" Height="18" Width="31"/>
-        <CheckBox x:Name="cb2" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="202,257,0,0" Height="18" Width="31"/>
-        <CheckBox x:Name="cb3" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="303,257,0,0" Height="18" Width="31"/>
-        <CheckBox x:Name="cb4" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="403,257,0,0" Height="18" Width="31"/>
-        <CheckBox x:Name="cb5" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="506,257,0,0" Height="18" Width="31"/>
+        <CheckBox x:Name="cb1" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="101,257,0,0" Height="18" Width="31" IsEnabled="False"/>
+        <CheckBox x:Name="cb2" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="202,257,0,0" Height="18" Width="31" IsEnabled="False"/>
+        <CheckBox x:Name="cb3" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="303,257,0,0" Height="18" Width="31" IsEnabled="False"/>
+        <CheckBox x:Name="cb4" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="403,257,0,0" Height="18" Width="31" IsEnabled="False"/>
+        <CheckBox x:Name="cb5" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="506,257,0,0" Height="18" Width="31" IsEnabled="False"/>
         
         <Button Content="Roll the dice..." HorizontalAlignment="Left" VerticalAlignment="Top" Width="194" Margin="61,291,0,0" Height="57" FontFamily="Snap ITC" FontSize="20" Background="#FFFFE3BC">
             <Button.Effect>

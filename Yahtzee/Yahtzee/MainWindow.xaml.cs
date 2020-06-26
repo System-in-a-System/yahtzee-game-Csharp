@@ -24,5 +24,16 @@ namespace Yahtzee
         {
             InitializeComponent();
         }
+
+        // Set initial game parameters
+        int rollCounter = 0;
+
+        int firstDie = 0;
+        int secondDie = 0;
+        int thirdDie = 0;
+        int fourthDie = 0;
+        int fifthDie = 0;
+
+
     }
 }
