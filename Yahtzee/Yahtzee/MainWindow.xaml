@@ -20,11 +20,11 @@
                     <TranslateTransform Y="0.512"/>
                 </TransformGroup>
             </StackPanel.RenderTransform>
-            <Image Height="100" Source="/images/1.jpg"/>
-            <Image Height="100" Source="/images/2.jpg"/>
-            <Image Height="100" Source="/images/3.jpg"/>
-            <Image Height="100" Source="/images/4.jpg"/>
-            <Image Height="100" Source="/images/5.jpg"/>
+            <Image x:Name="img1" Height="100" Source="/images/1.jpg"/>
+            <Image x:Name="img2" Height="100" Source="/images/2.jpg"/>
+            <Image x:Name="img3" Height="100" Source="/images/3.jpg"/>
+            <Image x:Name="img4" Height="100" Source="/images/4.jpg"/>
+            <Image x:Name="img5" Height="100" Source="/images/5.jpg"/>
         </StackPanel>
         
         <CheckBox x:Name="cb1" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="101,257,0,0" Height="18" Width="31" IsEnabled="False"/>
@@ -33,7 +33,7 @@
         <CheckBox x:Name="cb4" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="403,257,0,0" Height="18" Width="31" IsEnabled="False"/>
         <CheckBox x:Name="cb5" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="506,257,0,0" Height="18" Width="31" IsEnabled="False"/>
         
-        <Button Content="Roll the dice..." HorizontalAlignment="Left" VerticalAlignment="Top" Width="194" Margin="61,291,0,0" Height="57" FontFamily="Snap ITC" FontSize="20" Background="#FFFFE3BC">
+        <Button x:Name="rollButton" Content="Roll the dice..." HorizontalAlignment="Left" VerticalAlignment="Top" Width="194" Margin="61,291,0,0" Height="57" FontFamily="Snap ITC" FontSize="20" Background="#FFFFE3BC" Click="RollButton_Click">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="20"/>
             </Button.Effect>
