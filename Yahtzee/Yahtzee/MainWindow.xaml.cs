@@ -49,13 +49,13 @@ namespace Yahtzee
             cb3.IsEnabled = true;
             cb4.IsEnabled = true;
             cb5.IsEnabled = true;
-            
-            
+
+
             // If the player does not hold back the first die...
             if (!(bool)cb1.IsChecked)
             {
                 // ... roll the first die
-                firstDie = roll.Next(1,7);
+                firstDie = roll.Next(1, 7);
 
                 switch (firstDie)
                 {
@@ -66,10 +66,10 @@ namespace Yahtzee
                         img1.Source = new BitmapImage(new Uri("pack://application:,,,/images/2.jpg"));
                         break;
                     case 3:
-                        img1.Source = new BitmapImage(new Uri("pack://application:,,,/images/3.jpg")); 
+                        img1.Source = new BitmapImage(new Uri("pack://application:,,,/images/3.jpg"));
                         break;
                     case 4:
-                        img1.Source = new BitmapImage(new Uri("pack://application:,,,/images/4.jpg")); 
+                        img1.Source = new BitmapImage(new Uri("pack://application:,,,/images/4.jpg"));
                         break;
                     case 5:
                         img1.Source = new BitmapImage(new Uri("pack://application:,,,/images/5.jpg"));
@@ -199,6 +199,91 @@ namespace Yahtzee
                         break;
                 }
             }
+
+
+            // Update roll counter
+            rollCounter++;
+
+
+
+            // Update game status & functioanlity accordingly
+            switch (rollCounter)
+            {
+                case 1:
+                    infoLabel.Content = "You have 2 rolls left";
+                    break;
+
+                case 2:
+                    infoLabel.Content = "You have 1 roll left";
+                    break;
+
+                case 3:
+                    // Calculate game results
+                    int[] output = { firstDie, secondDie, thirdDie, fourthDie, fifthDie };
+
+                    int highestNumberOfMatches = getHighestNumberOfMatches(output);
+                    
+
+                    // Display game results						
+                    if (highestNumberOfMatches == 5)
+                        infoLabel.Content = "It's Yahtzee!";
+                 
+
+                    else if (highestNumberOfMatches == 4)
+                        infoLabel.Content = "It's four of a kind!";
+
+
+                    else if (highestNumberOfMatches == 3)
+                        infoLabel.Content = "It's three of a kind!";
+
+
+                    else if (secondDie - firstDie == 1 && thirdDie - secondDie == 1 &&
+                            fourthDie - thirdDie == 1 && fifthDie - fourthDie == 1)
+                        infoLabel.Content = "It's a large Straight!";
+
+
+                    else if ((secondDie - firstDie == 1 && thirdDie - secondDie == 1 && fourthDie - thirdDie == 1) ||
+                            (thirdDie - secondDie == 1 && fourthDie - thirdDie == 1 && fifthDie - fourthDie == 1))
+                       infoLabel.Content = "It's a small Straight!";
+
+
+                    else if (highestNumberOfMatches == 2)
+                        infoLabel.Content = "It's a pair!";
+
+
+                    else
+                        infoLabel.Content = "You will get lucky next time";
+
+                    break;
+            }
+        }
+
+
+
+        // Method to retrieve the highest frequency of element occurence in an int[] array   
+        public static int getHighestNumberOfMatches(int[] numbers)
+        {
+
+            int highestNumberOfMatches = 0;
+
+            for (int i = 0; i < numbers.Length; i++)
+            {
+
+                int matches = 0;
+                int currentComparand = numbers[i];
+
+                foreach (int number in numbers)
+                {
+                    if (number == currentComparand)
+                        matches++;
+                }
+
+                if (matches > highestNumberOfMatches)
+                    highestNumberOfMatches = matches;
+
+            }
+
+            return highestNumberOfMatches;
         }
     }
 }
