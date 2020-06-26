@@ -254,12 +254,29 @@ namespace Yahtzee
                     else
                         infoLabel.Content = "You will get lucky next time";
 
+
+
+                    // Disable the roll button
+                    rollButton.IsEnabled = false;
+
+                    // Disable the checkboxes
+                    cb1.IsEnabled = false;
+                    cb2.IsEnabled = false;
+                    cb3.IsEnabled = false;
+                    cb4.IsEnabled = false;
+                    cb5.IsEnabled = false;
+
+                    // Enable the restartbutton
+                    restartButton.Visibility = Visibility.Visible;
+
+
                     break;
             }
         }
 
 
-
+   
+        
         // Method to retrieve the highest frequency of element occurence in an int[] array   
         public static int getHighestNumberOfMatches(int[] numbers)
         {
@@ -284,6 +301,46 @@ namespace Yahtzee
             }
 
             return highestNumberOfMatches;
+        }
+
+
+
+        private void RestartButton_Click(object sender, RoutedEventArgs e)
+        {
+
+            // Reset dice
+            img1.Source = new BitmapImage(new Uri("pack://application:,,,/images/1.jpg"));
+            img2.Source = new BitmapImage(new Uri("pack://application:,,,/images/2.jpg"));
+            img3.Source = new BitmapImage(new Uri("pack://application:,,,/images/3.jpg"));
+            img4.Source = new BitmapImage(new Uri("pack://application:,,,/images/4.jpg"));
+            img5.Source = new BitmapImage(new Uri("pack://application:,,,/images/5.jpg"));
+
+            // Uncheck boxes
+            cb1.IsChecked = false;
+            cb2.IsChecked = false;
+            cb3.IsChecked = false;
+            cb4.IsChecked = false;
+            cb5.IsChecked = false;
+
+            // Clean infolabel
+            infoLabel.Content = "Roll the dice...";
+
+
+            // Reset initial game parameters
+            rollCounter = 0;
+
+            firstDie = 0;
+            secondDie = 0;
+            thirdDie = 0;
+            fourthDie = 0;
+            fifthDie = 0;
+
+
+            // Enable the roll button
+            rollButton.IsEnabled = true;
+
+            // Hide the restart button
+            restartButton.Visibility = Visibility.Hidden;
         }
     }
 }
